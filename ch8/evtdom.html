@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evtdom</title>
+</head>
+<body>
+    <input type="button" id="btnclk" value='page 70'>
+    <script>
+        btnclk.onclick = function(){
+            alert('버튼 클릭');
+        }
+    </script>
+
+    <input type="button" id="btnclk2" value='page 71' onclick="first()">
+    <script>
+        function first(){
+            alert('첫번째 메시지')
+        }
+        btnclk2.onclick = function(){
+            alert('두번째 메시지');
+        }
+    </script>
+</body>
+</html>

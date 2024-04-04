@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evtlistener</title>
+</head>
+<body>
+    <input type="button" id="btnclk" value="버튼1" >
+    <script>
+        function first(){
+            alert('첫번째 메시지');
+        }
+        btnclk.addEventListener('click', first);
+        btnclk.addEventListener('click', function(){
+            alert('두번째 메시지');
+        });
+       
+    </script>
+    <!--page 76-->
+    <input type="button" id="btnclk2" value="버튼2" >
+    <script>
+        function first(){
+            alert('첫번째 메시지');
+        }
+        btnclk2.addEventListener('click', first);
+        btnclk2.addEventListener('click', function(){
+            alert('두번째 메시지');
+        });
+       btnclk2.removeEventListener('click', first);
+    </script>
+</body>
+</html>
