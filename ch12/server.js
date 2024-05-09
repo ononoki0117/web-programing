@@ -11,14 +11,14 @@ mongoclient.connect(url).then(client => {
 
     mydb = client.db('testboard');
 
-    app.listen(8080, function(){
+    app.listen(8080, function () {
         console.log("포트 8080으로 접속 대기중");
     });
-}).catch(err=>{
+}).catch(err => {
     console.log(err);
 });
 
-app.get('/list', function(req, res){
+app.get('/list', function (req, res) {
     mydb.collection('post').find().toArray().then(result => {
         console.log(result);
     })
